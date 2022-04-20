@@ -42,7 +42,7 @@
 </head>
 <body>
     <main>
-        <div class="container-fluid">
+        <section class="container-fluid">
             <div class="row">
                 <div class="col-12 p-3">
                     <h1 class="text-center">Teachers</h1>
@@ -69,7 +69,7 @@
                     <?php }?>
                 </div>   
             </div>
-        </div>
+        </section>
 
         <section class="container-fluid">
             <div class="row">
