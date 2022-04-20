@@ -48,14 +48,6 @@ $basket_matches = [
     <main>
         <div>
             <h2>Basket Match</h2>
-            <!--  <p>
-                <?php 
-                    for($i = 0; $i < count($basket_matches); $i++){
-                        var_dump($basket_matches[$i]);
-                    }
-                ?>
-            </p> -->
-
             <ul>
                 <?php for($i = 0; $i < count($basket_matches); $i++){?>
 
