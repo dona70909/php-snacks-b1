@@ -42,22 +42,22 @@
 </head>
 <body>
     <main>
-        <section class="container-fluid">
-            <div class="row">
+        <section class="container-fluid p-5">
+            <div class="row border p-2">
                 <?php for($i = 0; $i< count($db_keys); $i++) { ?>
                     <div class="col-12">
-                        <h1> <?php var_dump(strcmp($db_keys[$i],'teacher')) ?></h1>
-                        <h1> <?php echo $db_keys[$i] ?> </h1>
+                        <!-- <h1> <?php var_dump(strcmp($db_keys[$i],'teacher')) ?></h1> -->
+                        <h1 class="text-center text-uppercase p-3"><?php echo $db_keys[$i] ?></h1>
                     </div>
-                    <div class="col-12 d-flex">
+                    <div class="col-12 d-flex justify-content-center p-0">
                         <?php for($j = 0; $j < count($db_values); $j++) { ?>
                             <?php if(strcmp($db_keys[$i],'teacher') == 1) { ?>
-                                <div class="box-gray col-3">
+                                <div class="gray-box col-3 p-2">
                                     <p><?php echo $db_values[$i][$j]["name"] ?></p>
                                     <p><?php echo $db_values[$i][$j]["lastname"] ?></p>
                                 </div>
                             <?php } else { ?>
-                                <div class="box-green col-3">
+                                <div class="green-box col-3 p-2">
                                     <p><?php echo $db_values[$i][$j]["name"] ?></p>
                                     <p><?php echo $db_values[$i][$j]["lastname"] ?></p>
                                 </div>
@@ -68,8 +68,8 @@
             </div>
         </section>
 
-        <section class="container-fluid">
-            <div class="row">
+        <section class="container-fluid p-5">
+            <div class="row border p-3">
                 <?php foreach($db as $value => $inner_array) { ?>
                     <div class="col-12  p-3">
                         <h2 class="text-uppercase text-center"> <?php echo $value ?> </h2>
