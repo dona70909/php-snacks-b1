@@ -46,7 +46,12 @@
             <div class="row border p-2">
                 <?php for($i = 0; $i< count($db_keys); $i++) { ?>
                     <div class="col-12">
-                        <!-- <h1> <?php var_dump(strcmp($db_keys[$i],'teacher')) ?></h1> -->
+                        <h1> 
+                            <?php
+                                
+                                var_dump(in_array('teacher',$db_keys));
+                            ?>
+                        </h1>
                         <h1 class="text-center text-uppercase p-3"><?php echo $db_keys[$i] ?></h1>
                     </div>
                     <div class="col-12 d-flex justify-content-center p-0">
