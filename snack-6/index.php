@@ -44,31 +44,27 @@
     <main>
         <section class="container-fluid">
             <div class="row">
-                <div class="col-12 p-3">
-                    <h1 class="text-center">Teachers</h1>
-                </div>
-                
-                <div class="box gray-box p-5 col-6">
-                    <h2 class="text-uppercase mb-4"><?php echo $db_keys[0]?></h2>
-                    <?php for($j = 0; $j < count($db_values[0]);$j++) { ?>
-                        <div>
-                            <p> <?php echo $db_values[0][$j]['name'] ?> </p>
-                            <p> <?php echo $db_values[0][$j]['lastname'] ?> </p>
-                        </div>
-                        <hr>
-                    <?php }?>
-                </div>
-            
-                <div class="box green-box p-5 col-6">
-                    <h2 class="text-uppercase mb-4"><?php echo $db_keys[1] ?></h2>
-                    <?php for($j = 0; $j < count($db_values[1]);$j++) { ?>
-                        <div>
-                            <p> <?php echo $db_values[1][$j]['name'] ?> </p>
-                            <p> <?php echo $db_values[1][$j]['lastname'] ?> </p>
-                        </div>
-                        <hr>
-                    <?php }?>
-                </div>   
+                <?php for($i = 0; $i< count($db_keys); $i++) { ?>
+                    <div class="col-12">
+                        <h1> <?php var_dump(strcmp($db_keys[$i],'teacher')) ?></h1>
+                        <h1> <?php echo $db_keys[$i] ?> </h1>
+                    </div>
+                    <div class="col-12 d-flex">
+                        <?php for($j = 0; $j < count($db_values); $j++) { ?>
+                            <?php if(strcmp($db_keys[$i],'teacher') == 1) { ?>
+                                <div class="box-gray col-3">
+                                    <p><?php echo $db_values[$i][$j]["name"] ?></p>
+                                    <p><?php echo $db_values[$i][$j]["lastname"] ?></p>
+                                </div>
+                            <?php } else { ?>
+                                <div class="box-green col-3">
+                                    <p><?php echo $db_values[$i][$j]["name"] ?></p>
+                                    <p><?php echo $db_values[$i][$j]["lastname"] ?></p>
+                                </div>
+                            <?php }?> 
+                        <?php } ?>  
+                    </div>
+                <?php }; ?>   
             </div>
         </section>
 
