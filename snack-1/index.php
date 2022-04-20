@@ -57,6 +57,7 @@ $basket_matches = [
                         <span><?php echo $basket_matches[$i]["score_team"] ?> - </span>
                         <span><?php echo $basket_matches[$i]["score_guest"] ?></span>
                     </li>
+                    
                 <?php } ?>
         
             </ul>
