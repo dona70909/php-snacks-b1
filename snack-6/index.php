@@ -44,7 +44,7 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 p-3">
                     <h1 class="text-center">Teachers</h1>
                 </div>
                 <div class="box gray-box p-5 col-6">
