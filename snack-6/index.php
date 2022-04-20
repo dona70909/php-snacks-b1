@@ -47,6 +47,7 @@
                 <div class="col-12 p-3">
                     <h1 class="text-center">Teachers</h1>
                 </div>
+                
                 <div class="box gray-box p-5 col-6">
                     <h2 class="text-uppercase mb-4"><?php echo $db_keys[0]?></h2>
                     <?php for($j = 0; $j < count($db_values[0]);$j++) { ?>
