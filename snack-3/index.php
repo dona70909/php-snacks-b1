@@ -66,12 +66,14 @@
     <main>
         <div class="container-posts">
             <?php for($i = 0; $i < count($posts_dates_keys); $i++) { ?>
-                <h2>Post Date: <?php echo $posts_dates_keys[$i] ?> </h2>
-                <?php  for($j = 0; $j < count($post_content[$i]); $j++) { ?>
-                    <h3><?php echo $post_content[$i][$j]['title']; ?></h3>
-                    <p><?php echo $post_content[$i][$j]['text']; ?></p>
-                    <em><?php echo $post_content[$i][$j]['author']; ?></em>
-                <?php } ?>    
+                <div class="post">
+                    <h2>Post Date: <?php echo $posts_dates_keys[$i] ?> </h2>
+                    <?php  for($j = 0; $j < count($post_content[$i]); $j++) { ?>
+                        <h3><?php echo $post_content[$i][$j]['title']; ?></h3>
+                        <p><?php echo $post_content[$i][$j]['text']; ?></p>
+                        <em><?php echo $post_content[$i][$j]['author']; ?></em>
+                    <?php } ?> 
+                </div>
             <?php } ?>
         </div>
     </main>
