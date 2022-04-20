@@ -1,7 +1,4 @@
-.box {
-    width: 50%;
-    height: 400px;
-}
+
 
 .green-box {
     background-color: rgb(53, 154, 53);
@@ -9,4 +6,13 @@
 
 .gray-box {
     background-color: rgb(183, 183, 183);
+}
+
+.centerd-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: red;
+    margin-bottom: 10rem;
 }

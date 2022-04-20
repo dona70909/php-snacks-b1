@@ -70,6 +70,34 @@
                 </div>   
             </div>
         </div>
+
+        <section class="container-fluid">
+            <div class="row">
+                <?php foreach($db as $value => $inner_array) { ?>
+                    <div class="col-12  p-3">
+                        <h2 class="text-uppercase text-center"> <?php echo $value ?> </h2>
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-center align-items-center p-4">
+                        <?php foreach($inner_array as $sub_array => $content) { ?>
+                            <?php if($value == "teachers") { ?>
+                                <div class="col-3 gray-box p-3">
+                                    <p>Name: <?php echo $content["name"]; ?>
+                                    <p>Lastname: <?php echo $content["lastname"]; ?> </p>
+                                </div>
+                                
+                            <?php } else { ?>
+                                <div class="col-3 green-box p-3">
+                                    <p>Name: <?php echo $content["name"]; ?>
+                                    <p>Lastname: <?php echo $content["lastname"]; ?> </p>
+                                </div>
+                                
+                            <?php } ?>        
+                        <?php } ?>
+                    </div>
+                <?php  } ?>
+            </div>
+        </section>
     </main>
 </body>
 </html>
