@@ -46,17 +46,11 @@
             <div class="row border p-2">
                 <?php for($i = 0; $i< count($db_keys); $i++) { ?>
                     <div class="col-12">
-                        <h1> 
-                            <?php
-                                
-                                var_dump(in_array('teacher',$db_keys));
-                            ?>
-                        </h1>
                         <h1 class="text-center text-uppercase p-3"><?php echo $db_keys[$i] ?></h1>
                     </div>
                     <div class="col-12 d-flex justify-content-center p-0">
                         <?php for($j = 0; $j < count($db_values); $j++) { ?>
-                            <?php if(strcmp($db_keys[$i],'teacher') == 1) { ?>
+                            <?php if(strcmp($db_keys[$i],'teachers') == 1) { ?>
                                 <div class="gray-box col-3 p-2">
                                     <p><?php echo $db_values[$i][$j]["name"] ?></p>
                                     <p><?php echo $db_values[$i][$j]["lastname"] ?></p>
